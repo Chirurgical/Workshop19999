@@ -8,7 +8,7 @@ import frc.robot.subsystems.DriveBase;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 
 /** An example command that uses an example subsystem. */
-public class Forward extends CommandBase {
+public class Backward extends CommandBase {
   @SuppressWarnings({"PMD.UnusedPrivateField", "PMD.SingularField"})
   private final DriveBase m_drivebase;
   private final double distance;
@@ -18,7 +18,7 @@ public class Forward extends CommandBase {
    *
    * @param subsystem The subsystem used by this command.
    */
-  public Forward(DriveBase drivebase, double inches) {
+  public Backward(DriveBase drivebase, double inches) {
     m_drivebase = drivebase;
     distance = inches;
     // Use addRequirements() here to declare subsystem dependencies.
@@ -36,7 +36,7 @@ public class Forward extends CommandBase {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    m_drivebase.arcadeDrive(1, 0);
+    m_drivebase.arcadeDrive(-1, 0);
   }
 
   // Called once the command ends or is interrupted.
